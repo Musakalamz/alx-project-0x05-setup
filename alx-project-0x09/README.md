@@ -1,40 +1,31 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# 🧩 Project 0x09 — AI Image Generator (GPT-4 Image Generation Integration)
 
-## Getting Started
+## 📘 Overview
 
-First, run the development server:
+In this project, we extend our **AI Image Generation App** to interact with the **GPT-4 Image Generation API**.  
+This task introduces environment variable management for API keys, backend API routes using Next.js, and client–server communication for real-time image generation based on user input.
+
+We’ll first configure our **local environment** to securely handle API keys and then implement a backend endpoint to send prompts to GPT-4 and display AI-generated images in the frontend.
+
+---
+
+## ##️⃣ Task 2 — Set Up Local Environment  
+**Mandatory**
+
+### 🎯 Objectives
+
+- Configure a **local environment variable file (`.env.local`)** to securely store the GPT-4 API key.  
+- Understand why API keys must remain private and not be exposed in source code.  
+- Prepare the base environment for interacting with the GPT-4 Image Generation endpoint.  
+
+---
+
+### ⚙️ Instructions
+
+#### 1️⃣ Duplicate the previous project
+
+Duplicate your existing project from **alx-project-0x08** to a new directory:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+cp -r alx-project-0x08 alx-project-0x09
+cd alx-project-0x09
