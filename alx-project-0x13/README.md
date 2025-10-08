@@ -1,40 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# 🧠 Image Generation App — Custom Hook  
+**Project:** Application of State (Reusable Logic with Custom Hooks)  
+**Directory:** `alx-project-0x12`  
+**Repository:** `alx-project-0x05-setup`  
 
-## Getting Started
+---
 
-First, run the development server:
+## 📘 Overview  
+In this stage, we refactor our image generation app to use a **custom React hook**.  
+By creating a custom hook named **`useFetchData`**, we extract the API request logic into a reusable function that can be used across multiple components.  
 
+This approach improves **code organization**, **reusability**, and **maintainability**, making the application cleaner and easier to extend.  
+
+---
+
+## 🎯 Objectives  
+- Create a **custom React hook** to handle API requests.  
+- Refactor the main component to use the custom hook.  
+- Maintain dynamic state for loading, error, and image data.  
+- Track and display previously generated images.  
+
+---
+## 🧱 Folder Structure
+
+alx-project-0x12/
+├── components/
+│   └── common/
+│       └── ImageCard.tsx
+│   └── layouts/
+│       ├── Header.tsx
+│       ├── Footer.tsx
+│       └── Layout.tsx
+├── constants/
+│   └── index.ts
+├── hooks/
+│   └── useFetchData.ts   ← (New custom hook)
+├── interfaces/
+│   └── index.ts
+├── pages/
+│   ├── api/
+│   │   └── generate-image.ts
+│   ├── _app.tsx
+│   └── index.tsx         ← (Modified file)
+├── public/
+├── styles/
+│   └── globals.css
+├── .env.local
+├── .gitignore
+├── package.json
+└── README.md
+
+---
+
+## 🧩 Project Setup  
+
+### 1️⃣ Duplicate Previous Project  
+Duplicate the existing project `alx-project-0x11` to a new directory called `alx-project-0x12`:  
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+cp -r alx-project-0x11 alx-project-0x12
